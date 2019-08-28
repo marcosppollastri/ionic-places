@@ -13,7 +13,7 @@ export class PlacesService {
     new Place('p2', 'Talampaya adventure', 'Talampaya is great', 'https://www.welcomeargentina.com/paseos/visita-pn-talampaya/parque-nacional-talampaya-1.jpg', 500),
   ];
 
-  get places() {
+  getPlaces() {
     return [...this._places];
   }
 

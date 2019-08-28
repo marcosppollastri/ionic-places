@@ -4,5 +4,5 @@ export class Place {
         public title: string,
         public description: string,
         public imageUrl: string,
-        public prince: number ) {}
+        public price: number ) {}
 }

@@ -4,6 +4,32 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12" size-sm="8" offset-sm="2" *ngFor="let place of loadedPlaces">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ place.title }}</ion-card-title>
+          <ion-card-subtitle>{{ place.price | currency }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img [src]="place.imageUrl"></ion-img>
+          <ion-text margin>
+            <p>{{ place.description }}</p>
+          </ion-text>
+          
+        </ion-card-content>
+        <div text-right padding>
+            <ion-button fill="outline" color="success" class="ion-margin-horizontal">
+              <ion-icon slot="icon-only" name="cart" color="success"></ion-icon>
+            </ion-button>
+            <ion-button fill="outline" color="warning" class="ion-margin-horizontal">
+                <ion-icon slot="icon-only" name="star" color="warning"></ion-icon>
+              </ion-button>
+          </div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
